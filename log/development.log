@@ -365,3 +365,39 @@ Started GET "/resources" for 127.0.0.1 at 2011-01-10 13:46:58 -0500
   [1m[35mResource Load (0.5ms)[0m  SELECT "resources".* FROM "resources"
 Rendered resources/index.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2011-01-10 13:54:33 -0500
+  Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+Rendered resources/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 13:54:35 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (164.2ms)
+Completed   in 170ms
+
+ActionView::Template::Error (undefined local variable or method `posts_path' for #<#<Class:0x19fc7ec>:0x19f9038>):
+    1: <h1>Home#index</h1>
+    2: <p>Find me in app/views/home/index.html.erb</p>
+    3: <p><%= link_to "My Blog", posts_path %></p>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__231365365_13609960__614498391'
+
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (72.7ms)
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (97.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 13:54:49 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2011-01-10 13:54:51 -0500
+  Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+Rendered resources/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 14ms (Views: 7.2ms | ActiveRecord: 0.4ms)
