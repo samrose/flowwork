@@ -1038,3 +1038,265 @@ Started GET "/" for 127.0.0.1 at 2011-01-10 14:34:07 -0500
   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
 Rendered home/index.html.erb within layouts/application (28.9ms)
 Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110110182553)
+Migrating to CreateResources (20110110184623)
+Migrating to AddUsernameToUsers (20110110193839)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mALTER TABLE "users" ADD "username" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110110193839')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("resources")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-01-10 14:44:06 -0500
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 28ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:44:06 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:44:09 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 34ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:44:16 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed   in 33ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 130ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110110182553)
+Migrating to CreateResources (20110110184623)
+Migrating to AddUsernameToUsers (20110110193839)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("resources")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:44:34 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed   in 12ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 158ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:44:39 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 33ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:44:44 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed   in 9ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 130ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:45:34 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed   in 10ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 165ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:45:46 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed   in 9ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 139ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:46:24 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 33ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:56:11 -0500
+  Processing by Devise::SessionsController#new as HTML
+Completed   in 4ms
+
+SyntaxError (/Users/paulbhartzog/Rails/flowwork/app/models/user.rb:14: unterminated string meets end of file
+/Users/paulbhartzog/Rails/flowwork/app/models/user.rb:14: syntax error, unexpected $end, expecting ']'):
+  
+
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (84.9ms)
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (92.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:57:16 -0500
+  Processing by Devise::SessionsController#new as HTML
+Completed   in 5ms
+
+SyntaxError (/Users/paulbhartzog/Rails/flowwork/app/models/user.rb:14: unterminated string meets end of file
+/Users/paulbhartzog/Rails/flowwork/app/models/user.rb:14: syntax error, unexpected $end, expecting ']'):
+  
+
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (104.4ms)
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (137.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 15:00:18 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 35ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 15:00:23 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 59ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 15:01:29 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 34ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-01-10 15:01:33 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed   in 9ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 132ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110110182553)
+Migrating to CreateResources (20110110184623)
+Migrating to AddUsernameToUsers (20110110193839)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("resources")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 15:04:38 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 15:04:41 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 15:04:46 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 61ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-01-10 15:04:51 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBKhxQl6D+VALEE+1C/GCmX1ssKQNVckKs4U8RQowGM=", "user"=>{"username"=>"paulbhartzog", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE (username = 'paulbhartzog') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-01-10 19:29:37.651404', "current_sign_in_at" = '2011-01-10 20:04:52.110216', "sign_in_count" = 6, "updated_at" = '2011-01-10 20:04:52.110728' WHERE ("users"."id" = 2)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 250ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 15:04:52 -0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered home/index.html.erb within layouts/application (82.7ms)
+Completed 200 OK in 88ms (Views: 87.2ms | ActiveRecord: 0.6ms)
