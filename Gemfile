@@ -7,6 +7,9 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
+# gem devise
+gem "devise", :git => "git://github.com/plataformatec/devise.git"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -32,10 +35,6 @@ group :development, :test do
 end
 
 group :cucumber do
-    gem 'capybara'
-    gem 'database_cleaner'
     gem 'cucumber-rails'
     gem 'cucumber'
-    gem 'spork'
-    gem 'launchy'
 end
