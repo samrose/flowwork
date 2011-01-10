@@ -2,3 +2,13 @@ body {
     background-color: #eeeeee;
     padding: 30px;
 }
+p.notice {
+    background-color: #CBFBC2;
+    border: .5px solid #6ABB56;
+    padding: 5px;
+}
+div#user_nav {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}

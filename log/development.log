@@ -715,3 +715,190 @@ Started GET "/" for 127.0.0.1 at 2011-01-10 14:08:55 -0500
   Processing by HomeController#index as HTML
 Rendered home/index.html.erb within layouts/application (2.2ms)
 Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:11:41 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:11:47 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jzZF6zP/Q+7Q8VRWoblynzExnBtvqt4lJBA+9YcQjoo=", "user"=>{"email"=>"paulbhartzog@panarchy.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:11:47 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-01-10 14:11:59 -0500
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:11:59 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:12:05 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/bundler/gems/devise-fb4ec6e9da70/app/views/devise/shared/_links.erb (1.5ms)
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/bundler/gems/devise-fb4ec6e9da70/app/views/devise/sessions/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 37ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:12:22 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/s4zPHl8+4HQM6NtWevNKtX4iECfyoRWEo7fvN158Vk=", "user"=>{"email"=>"paulbhartzog@panarchy.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'paulbhartzog@panarchy.com') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE "users" SET "remember_created_at" = '2011-01-10 19:12:22.364687', "updated_at" = '2011-01-10 19:12:22.364989' WHERE ("users"."id" = 2)
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-01-10 19:08:55.254178', "current_sign_in_at" = '2011-01-10 19:12:22.369371', "sign_in_count" = 3, "updated_at" = '2011-01-10 19:12:22.369738' WHERE ("users"."id" = 2)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 161ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:12:22 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-01-10 14:12:44 -0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:12:45 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:14:10 -0500
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:14:38 -0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered home/index.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:15:05 -0500
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:15:14 -0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered home/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:15:39 -0500
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2011-01-10 14:16:41 -0500
+  Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered resources/index.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 65ms (Views: 57.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-01-10 14:17:04 -0500
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE "users" SET "remember_created_at" = NULL, "updated_at" = '2011-01-10 19:17:04.985749' WHERE ("users"."id" = 2)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:17:05 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:17:16 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/bundler/gems/devise-fb4ec6e9da70/app/views/devise/shared/_links.erb (1.5ms)
+Rendered /Users/paulbhartzog/.rvm/gems/ruby-1.9.2-p136/bundler/gems/devise-fb4ec6e9da70/app/views/devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 57ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-01-10 14:17:24 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7gbaDMo/zjB0pGqcssmbbYSOGXKl47+xuiB1zeB5HpY=", "user"=>{"email"=>"paulbhartzog@panarchy.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'paulbhartzog@panarchy.com') LIMIT 1
+  [1m[36mAREL (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-01-10 19:12:22.369371', "current_sign_in_at" = '2011-01-10 19:17:24.876337', "sign_in_count" = 4, "updated_at" = '2011-01-10 19:17:24.876811' WHERE ("users"."id" = 2)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 163ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:17:24 -0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered home/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2011-01-10 14:17:38 -0500
+  Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered resources/index.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 65ms (Views: 57.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:17:43 -0500
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2011-01-10 14:17:46 -0500
+  Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered resources/index.html.erb within layouts/application (51.9ms)
+Completed 200 OK in 64ms (Views: 56.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2011-01-10 14:17:59 -0500
+  Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered resources/index.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 63ms (Views: 55.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 14:18:04 -0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered home/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.5ms)
