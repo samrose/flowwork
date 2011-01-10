@@ -5,9 +5,8 @@ Feature: Register
 
 Scenario: Register
 	Given User not registered
-	And form contains user pass email data
 	When form is submitted 
-	And form is validated
-	Then user/pass is saved to db as new user
+	And username email password are validated
+	Then user is saved to db as new user
 	And user receives role and active status
 	And user is sent email
