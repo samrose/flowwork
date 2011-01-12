@@ -1366,3 +1366,30 @@ Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-10 15:29:07 -0500
 Rendered devise/shared/_links.erb (1.6ms)
 Rendered devise/sessions/new.html.erb within layouts/application (8.6ms)
 Completed 200 OK in 33ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-12 16:26:05 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-12 16:40:51 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 147ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-01-12 16:46:12 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 69ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-01-12 16:46:23 -0500
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/passwords/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 44ms (Views: 30.2ms | ActiveRecord: 0.0ms)
