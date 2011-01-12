@@ -1300,6 +1300,7 @@ Started GET "/" for 127.0.0.1 at 2011-01-10 15:04:52 -0500
   [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
 Rendered home/index.html.erb within layouts/application (82.7ms)
 Completed 200 OK in 88ms (Views: 87.2ms | ActiveRecord: 0.6ms)
+<<<<<<< HEAD
   [1m[36mSQL (0.6ms)[0m  [1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
@@ -1393,3 +1394,64 @@ Started GET "/users/password/new" for 127.0.0.1 at 2011-01-12 16:46:23 -0500
 Rendered devise/shared/_links.erb (1.7ms)
 Rendered devise/passwords/new.html.erb within layouts/application (19.4ms)
 Completed 200 OK in 44ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+=======
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 15:57:01 -0500
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 99ms (Views: 97.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2011-01-10 15:57:04 -0500
+  Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+Rendered resources/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 76ms (Views: 22.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 15:57:06 -0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered home/index.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-10 22:32:09 -0500
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (71.6ms)
+Completed 200 OK in 118ms (Views: 117.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-12 16:40:09 -0500
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (17.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered home/index.html.erb within layouts/application (193.5ms)
+Completed 200 OK in 252ms (Views: 233.3ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-01-12 16:40:51 -0500
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 128ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-12 16:40:51 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-12 16:40:57 -0500
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+>>>>>>> e43d2fb3843a1f5d9bd3c97e475c602b34717abb
