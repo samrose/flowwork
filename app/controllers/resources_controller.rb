@@ -22,6 +22,7 @@ class ResourcesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @resource }
+      format.json  { render :json => @resource }
     end
   end
 
