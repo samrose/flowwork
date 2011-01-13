@@ -8,6 +8,7 @@ h3 {
 }
 div {
     float:left;
+    overflow: hidden;
 }
 div#tools {
     background: -moz-linear-gradient(270deg, #FCFCFC, #ECECEC) repeat scroll 0 0 transparent;
@@ -17,9 +18,9 @@ div#tools {
     padding: 5px;
     position: fixed;
     top: 0px;
-    box-shadow: 0 0 3px #888;
-    -moz-box-shadow: 0 0 3px #888;
-    -webkit-box-shadow: 0 0 3px #888;
+    box-shadow: 0 1px 4px #888;
+    -moz-box-shadow: 0 1px 4px #888;
+    -webkit-box-shadow: 0 1px 4px #888;
     overflow: hidden;
 }
 div#main {
