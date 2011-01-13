@@ -2,6 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 // Sammy
+/*
 var appState = function(state){
     if(state=="sammy"){
         alert('sammy is working');
@@ -17,3 +18,4 @@ var appState = function(state){
         app.run()
     });
 })(jQuery);
+*/

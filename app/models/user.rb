@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
  protected
 
  def self.find_for_database_authentication(conditions)
-   username = conditions.delete(:username)
-   where(conditions).where(["username = :value", { :value => username }]).first
+   username = conditions.delete(:email)
+   where(conditions).where(["email = :value", { :value => email }]).first
  end
 
 end
