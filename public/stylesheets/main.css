@@ -1,13 +1,37 @@
 body {
-    padding: 30px;
+    padding:0; /*remove padding */
+    margin:0; /* remove margins */
+    border:0; /* remove borders */
 }
-p.notice {
-    background-color: #CBFBC2;
-    border: .5px solid #6ABB56;
+h3 {
+	text-shadow: 1px 1px 1px #fff; 
+}
+div {
+    float:left;
+}
+div#tools {
+    background: -moz-linear-gradient(270deg, #FCFCFC, #ECECEC) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #666;
+    width: 100%;
+    min-height: 20px;
     padding: 5px;
+    position: fixed;
+    top: 0px;
+    box-shadow: 0 0 3px #888;
+    -moz-box-shadow: 0 0 3px #888;
+    -webkit-box-shadow: 0 0 3px #888;
 }
-div#user_nav {
-    position: absolute;
-    top: 10px;
-    right: 30px;
+div#main {
+    height: 1000px;
+    margin-top: 20px;
+    padding: 30px;
+    overflow: auto;
+}
+div#appendix {
+    background-color: #e7e9eb;
+    border-top: 1px solid #666;
+    padding: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
 }
