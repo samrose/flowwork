@@ -37,4 +37,8 @@ div#appendix {
     position: fixed;
     bottom: 0px;
     overflow: hidden;
+    font-size: 9px;
+}
+div#appendix p {
+    font-size: 9px;
 }
