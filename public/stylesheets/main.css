@@ -20,6 +20,7 @@ div#tools {
     box-shadow: 0 0 3px #888;
     -moz-box-shadow: 0 0 3px #888;
     -webkit-box-shadow: 0 0 3px #888;
+    overflow: hidden;
 }
 div#main {
     height: 1000px;
@@ -34,4 +35,5 @@ div#appendix {
     width: 100%;
     position: fixed;
     bottom: 0px;
+    overflow: hidden;
 }
