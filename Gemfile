@@ -22,7 +22,8 @@ gem "devise", :git => "git://github.com/plataformatec/devise.git"
 
 # Bundle the extra gems:
 # gem 'bj'
-# gem 'nokogiri'
+
+
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
@@ -37,4 +38,6 @@ end
 group :cucumber do
     gem 'cucumber-rails'
     gem 'cucumber'
+    gem 'capybara'
+    gem 'nokogiri'
 end
