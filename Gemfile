@@ -37,4 +37,6 @@ end
 group :cucumber do
     gem 'cucumber-rails'
     gem 'cucumber'
+    gem 'capybara'
+    gem 'nokogiri'
 end
