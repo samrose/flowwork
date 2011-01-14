@@ -40,8 +40,5 @@ group :cucumber do
     gem 'cucumber'
     gem 'capybara'
     gem 'nokogiri'
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> a6cd5e30fbec75bd5db28a85ba742c8059df677a
+
