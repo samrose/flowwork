@@ -4,8 +4,8 @@ Feature: Resource Descriptions
 	I want to be able to view existing resources
 	and I want to be able to create new resources
 
-Scenario: Show resource
+Scenario: Show resources
 
-	Given a resource
+	Given an anonymous user
 	When I visit /resources
 	Then I should see a list of resources
