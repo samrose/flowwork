@@ -2,4 +2,7 @@ log/
 tmp/
 db/development.sqlite3
 db/test.sqlite3
+<<<<<<< HEAD
 
+=======
+>>>>>>> 819246aba97894ed5973f33c7a2c673e43d643e2
