@@ -10,10 +10,10 @@ Scenario Outline: Creating a new account
 	When I am on the signup page 
 	Then I should see "Sign up" 
 	Then I fill in "user_email" with "<email>" 
-	And I fill in "password" with "<password>" 
-	And I fill in "password_confirmation" with "<password>" 
-	And I press "Sign Up"
-	Then I should see "Login successful"
+	And I fill in "user_password" with "<password>" 
+	And I fill in "user_password_confirmation" with "<password>" 
+	And I press "user_submit"
+	Then I should see "Welcome! You have signed up successfully."
   
 
     Examples:
