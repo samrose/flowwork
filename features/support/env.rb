@@ -12,6 +12,8 @@ require 'cucumber/rails/rspec'
 require 'cucumber/rails/world'
 require 'cucumber/rails/active_record'
 require 'cucumber/web/tableish'
+require 'factory_girl'
+Dir.glob(File.join(File.dirname(__FILE__), '../../spec/factories/*.rb')).each {|f| require f }
 
 require 'capybara/rails'
 require 'capybara/cucumber'
