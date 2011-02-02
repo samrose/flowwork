@@ -7,8 +7,9 @@ Background:
   Given that a confirmed user exists
 
 Scenario Outline: Logging in
-  Given I am not yet logged in
-  When I fill in "user_email" with "<email>"
+  Given I am at the login page
+  Given I am not logged in
+  And I fill in "user_email" with "<email>"
   And I fill in "user_password" with "<password>"
   And I press "Sign in"
   Then I should <action>
@@ -21,3 +22,4 @@ Scenario: Logging out
   Given I am logged in
   When I go to the sign out link
   Then I should see "Signed out successfully"
+
