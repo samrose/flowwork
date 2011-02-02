@@ -1,14 +1,14 @@
 Given /^that a confirmed user exists$/ do
  	Factory.create(:minimal_user)
 end
-Given /^I am not yet logged in$/ do
+Given /^I am at the login page$/ do
  visit path_to('the login page')
-  fill_in('user_email', :with => 'minimal@example.com')
-  fill_in('user_password', :with => 'test1234')
-  click_button('Sign in')
-  if defined?(Spec::Rails::Matchers)
-    page.should have_content('Signed in as')
+end
+When /^I am not yet logged in$/ do
+if defined?(Spec::Rails::Matchers)
+    page.should have_content('Sign in')
   else
-    assert page.has_content?('Signed in as')
+    assert page.has_content?('Sign in')
   end
 end
+
