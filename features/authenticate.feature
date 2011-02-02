@@ -8,8 +8,8 @@ Background:
 
 Scenario Outline: Logging in
   Given I am at the login page
-  When I am not yet logged in
-  When I fill in "user_email" with "<email>"
+  Given I am not logged in
+  And I fill in "user_email" with "<email>"
   And I fill in "user_password" with "<password>"
   And I press "Sign in"
   Then I should <action>
