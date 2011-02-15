@@ -21,5 +21,3 @@ Given /^I am not logged in$/ do
     assert page.has_content?('Sign in')
   end
 end
-
-

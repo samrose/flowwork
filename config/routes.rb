@@ -58,6 +58,7 @@ Flowwork::Application.routes.draw do
   
   root :to => "home#index"
 
+  match "/quora" => "quora#index"
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
