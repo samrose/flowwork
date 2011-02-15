@@ -1,0 +1,2 @@
+class QuoraController < ApplicationController
+end

@@ -1,0 +1,2 @@
+module QuoraHelper
+end
