@@ -21,6 +21,6 @@ Scenario Outline: Logging in
 Scenario: Logging out
   Given I am logged in
   When I go to the sign out link
-  Then I should see "Signed out successfully"
+  Then I should see "Sign up or Sign in"
 
 
